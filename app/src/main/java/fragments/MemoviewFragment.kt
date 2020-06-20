@@ -29,7 +29,6 @@ class MemoviewFragment : ThousandFragment() {
 
     private lateinit var memoList:ArrayList<time>
     private lateinit var realm: Realm
-    lateinit var realmListener: RealmChangeListener<Realm>
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
