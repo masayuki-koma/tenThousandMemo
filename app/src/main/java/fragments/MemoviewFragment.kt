@@ -24,11 +24,7 @@ import io.realm.RealmChangeListener
 import io.realm.kotlin.where
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [MemoviewFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class MemoviewFragment : ThousandFragment() {
 
     private lateinit var memoList:ArrayList<time>
