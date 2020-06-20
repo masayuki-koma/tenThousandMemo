@@ -1,0 +1,92 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="fragments.AddmemoFragment"
+    android:background="#FDF5E6">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".AddMemoActivity">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="0dp">
+
+                    <NumberPicker
+                        android:id="@+id/numPicker0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:descendantFocusability="blocksDescendants"
+
+                        />
+
+                    <NumberPicker
+                        android:id="@+id/numPicker1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:descendantFocusability="blocksDescendants" />
+
+                    <NumberPicker
+                        android:id="@+id/numPicker2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="blocksDescendants" />
+
+                    <NumberPicker
+                        android:id="@+id/numPicker3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="blocksDescendants" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/descriptionEd"
+
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:hint="今日できたことをメモしよう"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <Button
+                    android:id="@+id/saveBtn"
+                    android:layout_width="58dp"
+                    android:layout_height="44dp"
+
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="24dp"
+
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@drawable/btnset"
+                    android:gravity="center"
+                    android:text="save"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

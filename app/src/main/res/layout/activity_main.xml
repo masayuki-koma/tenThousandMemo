@@ -5,60 +5,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDF5E6"
     tools:context=".MainActivity"
-    android:background="#FDF5E6">
+    android:id="@+id/containers"
+    >
 
-    <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/pieChartView"
-        android:layout_width="386dp"
-        android:layout_height="336dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginBottom="158dp"
-        app:layout_constraintBottom_toTopOf="@+id/addBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/timeText"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="0dp"
-        android:gravity="center"
-        android:text="累計500時間達成"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pieChartView" />
 
-    <Button
-        android:id="@+id/viewBtn"
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:background="@drawable/btnset"
-        android:text="メモ一覧"
-        app:layout_constraintEnd_toStartOf="@+id/addBtn"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/addBtn" />
+        android:background="@color/piechart2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicator="@null"
+        tools:layout_editor_absoluteX="0dp">
 
-    <Button
-        android:id="@+id/addBtn"
-        android:background="@drawable/btnset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="81dp"
-        android:text="編集"
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabMemoView"
+            android:icon="@drawable/selector_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabMemoAdd"
+            android:icon="@drawable/selector_addmemo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabChart"
+            android:icon="@drawable/selector_memoview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@+id/tabs"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/viewBtn"
-        app:layout_constraintTop_toBottomOf="@+id/timeText" />
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
